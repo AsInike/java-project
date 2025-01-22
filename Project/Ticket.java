@@ -1,45 +1,51 @@
-public enum vehicleType{
-    CAR , MOTOR; 
-}
 public class Ticket {
-    String vehicleType;
+    vehicleType type;
     double fee;
     int timeIn;
     int timeOut;
     int date;
     int ticketID;
     String vehicleNumber;
-    public Ticket ( String vehicleType, double fee, int timeIn, int timeOut, int date, int ticketID, String vehicleNumber ){
-        this.vehicleType = vehicleType;
-        this.fee = fee; 
+    public Ticket(vehicleType type, double fee, int timeIn, int timeOut, int date, int ticketID, String vehicleNumber) {
+        this.type = type;
+        this.fee = fee;
         this.timeIn = timeIn;
         this.timeOut = timeOut;
         this.ticketID = ticketID;
         this.date = date;
         this.vehicleNumber = vehicleNumber;
     }
-    public String vehicleType(){
-        return vehicleType;
+    public vehicleType getVehicleType() {
+        return type;
     }
-    public int getId(){
+
+    // Getter for ticket ID
+    public int getId() {
         return ticketID;
     }
-    public String getvehicleNumber(){
+
+    // Getter for vehicle number
+    public String getVehicleNumber() {
         return vehicleNumber;
     }
-    public int getEntryTime(){
+
+    // Getter for entry time
+    public int getEntryTime() {
         return timeIn;
     }
-    public int getExitTime(){
+
+    // Getter for exit time
+    public int getExitTime() {
         return timeOut;
     }
-    public int getDate(){
+
+    // Getter for date
+    public int getDate() {
         return date;
     }
-    public double getFee(){
+
+    // Getter for fee
+    public double getFee() {
         return fee;
-    }
-    public String getType(){
-        return vehicleType;
     }
 }
