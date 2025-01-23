@@ -1,11 +1,11 @@
 public class Ticket {
-    vehicleType type;
-    double fee;
-    int timeIn;
-    int timeOut;
-    int date;
-    int ticketID;
-    String vehicleNumber;
+    private vehicleType type;
+    private double fee;
+    private int timeIn;
+    private int timeOut;
+    private int date;
+    private int ticketID;
+    private String vehicleNumber;
     public Ticket(vehicleType type, double fee, int timeIn, int timeOut, int date, int ticketID, String vehicleNumber) {
         this.type = type;
         this.fee = fee;
@@ -38,13 +38,9 @@ public class Ticket {
     public int getExitTime() {
         return timeOut;
     }
-
-    // Getter for date
     public int getDate() {
         return date;
     }
-
-    // Getter for fee
     public double getFee() {
         return fee;
     }
