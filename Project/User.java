@@ -15,7 +15,8 @@ public class User {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-    // for customer because admin no need input DOB and gender
+
+    // For customer because admin does not need to input DOB and gender
     public User(String name, String userType, String email, String phoneNumber, Date dob, String gender) {
         this(name, userType, email, phoneNumber);
         this.dob = dob;
@@ -34,64 +35,40 @@ public class User {
         }
     }
 
-    public boolean isAdmin() {
-        return "Admin".equalsIgnoreCase(userType);
+    public boolean isAdmin() { // this method will check if the user is an admin
+        return false;
     }
 
-    public boolean bookParkingSlot(String slotId, Date time, int duration) {
-        // Logic to book a parking slot
-        System.out.println("Booking slot: " + slotId);
-        return true; // Simulating successful booking
+    public boolean bookParkingSlot(String slotId, Date time, int duration) { // this method will book a parking slot
+        return false;
     }
 
-    public boolean cancelBooking(String bookingId) {
-        // Logic to cancel a booking
-        System.out.println("Cancelling booking: " + bookingId);
-        return true; // Simulating successful cancellation
+    public boolean cancelBooking(String bookingId) { // this method will cancel a booking so that customer can cancel or keep the booking
+        return false;
     }
 
-    public void viewParkingHistory() {
-        // Logic to display parking history
-        System.out.println("Displaying parking history for " + name);
+    public void viewParkingHistory() { // this method will display the parking history for the (customer)
+        return;
     }
 
-    public boolean checkSlotAvailability(String slotId, Date time, int duration) {
-        // Logic to check availability
-        System.out.println("Checking availability for slot: " + slotId);
-        return true; // Simulating availability
+    public boolean checkSlotAvailability(String slotId, Date time, int duration) { // this method will check if the slot is available
+        return false;
     }
 
     public boolean updateProfile(String email, String phoneNumber) {
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        System.out.println("Profile updated successfully.");
-        return true;
+        return false;
     }
 
     // Admin-Specific Methods
     public boolean addParkingSlot(String slotId, String location) {
-        if (!isAdmin()) {
-            System.out.println("Access denied. Only admins can add parking slots.");
-            return false;
-        }
-        System.out.println("Adding new parking slot: " + slotId);
-        return true; // Simulating successful addition
+        return false;
     }
 
     public boolean removeParkingSlot(String slotId) {
-        if (!isAdmin()) {
-            System.out.println("Access denied. Only admins can remove parking slots.");
-            return false;
-        }
-        System.out.println("Removing parking slot: " + slotId);
-        return true; // Simulating successful removal
+        return false;
     }
 
     public void generateReports(Date startDate, Date endDate) {
-        if (!isAdmin()) {
-            System.out.println("Access denied. Only admins can generate reports.");
-            return;
-        }
-        System.out.println("Generating reports from " + startDate + " to " + endDate);
+        return;
     }
 }
