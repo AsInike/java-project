@@ -39,11 +39,11 @@ public class User {
         return false;
     }
 
-    public boolean bookParkingSlot(String slotId, Date time, int duration) { // this method will book a parking slot
+    public boolean bookParkingSlot() { // this method will book a parking slot
         return false;
     }
 
-    public boolean cancelBooking(String bookingId) { // this method will cancel a booking so that customer can cancel or keep the booking
+    public boolean cancelBooking() { // this method will cancel a booking so that customer can cancel or keep the booking
         return false;
     }
 
@@ -51,24 +51,24 @@ public class User {
         return;
     }
 
-    public boolean checkSlotAvailability(String slotId, Date time, int duration) { // this method will check if the slot is available
+    public boolean checkSlotAvailability() { // this method will check if the slot is available
         return false;
     }
 
-    public boolean updateProfile(String email, String phoneNumber) {
+    public boolean updateProfile() {
         return false;
     }
 
-    // Admin-Specific Methods
-    public boolean addParkingSlot(String slotId, String location) {
+    // Admin Methods
+    public boolean addParkingLot() {
         return false;
     }
 
-    public boolean removeParkingSlot(String slotId) {
+    public boolean removeParkingLot() {
         return false;
     }
 
-    public void generateReports(Date startDate, Date endDate) {
+    public void generateReports() {
         return;
     }
 }
