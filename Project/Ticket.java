@@ -1,47 +1,59 @@
 public class Ticket {
-    private vehicleType type;
-    private double fee;
-    private int timeIn;
-    private int timeOut;
-    private int date;
-    private int ticketID;
-    private String vehicleNumber;
-    public Ticket(vehicleType type, double fee, int timeIn, int timeOut, int date, int ticketID, String vehicleNumber) {
-        this.type = type;
+    double fee;
+    double timeIn;
+    double timeOut;
+    double date;
+    String vehicleNumber;
+    String lot;
+    String slot;
+    int floor;
+    double ticketID;
+    String vehicle;
+
+    public Ticket( int floor; String vehicle,double fee, double timeIn, double timeOut,
+        double date, double ticketID, String vehicleNumber , String lot , String slot) {
         this.fee = fee;
-        this.timeIn = timeIn;
+        this.timeIn = System.currentTimeMillis();
         this.timeOut = timeOut;
         this.ticketID = ticketID;
         this.date = date;
         this.vehicleNumber = vehicleNumber;
+        this.lot = lot;
+        this.slot = slot;
+        this.vehicle = vehicle;
+        this.floor = floor;
     }
-    public vehicleType getVehicleType() {
-        return type;
-    }
-
-    // Getter for ticket ID
-    public int getId() {
+    public double getId() {
         return ticketID;
     }
-
-    // Getter for vehicle number
     public String getVehicleNumber() {
         return vehicleNumber;
     }
-
-    // Getter for entry time
-    public int getEntryTime() {
+    public double getEntryTime() {
         return timeIn;
     }
-
-    // Getter for exit time
-    public int getExitTime() {
+    public double getExitTime() {
         return timeOut;
     }
-    public int getDate() {
+    public double getDate() {
         return date;
     }
     public double getFee() {
         return fee;
+    }
+    public String getLot() {
+        return lot;
+    }
+    public String getSlot() {
+        return slot;
+    }
+    public String getVehicle() {
+        return vehicle;
+    }
+    public void setVehicle(String vehicle) {
+        this.vehicle = vehicle;
+    }
+    public int getFloor() {
+        return floor;
     }
 }
